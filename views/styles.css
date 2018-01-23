@@ -1,3 +1,8 @@
+#togglelogin {
+    padding-right: 15px;
+}
+
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -19,21 +24,6 @@ body {
 }
 
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
-body > .container {
-  padding: 60px 15px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
 
 
