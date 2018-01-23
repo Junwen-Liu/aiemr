@@ -2,6 +2,9 @@
     padding-right: 15px;
 }
 
+#loginAlert{
+    display: none;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

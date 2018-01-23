@@ -17,6 +17,7 @@
         </button>
       </div>
       <div class="modal-body">
+       <div class="alert alert-danger" id="loginAlert"></div>
         <form>
             <input type="hidden" id="loginActive" name="loginActive" value="1">
           <div class="form-group">
@@ -39,25 +40,27 @@
 </div>
 
 <script>
-
+    
+    //setup the actions when toggle click login/sign up
     $("#togglelogin").click(function(){
         if($("#loginActive").val() == "1"){
             
             $("#loginActive").val("0");
             $("#loginmodaltitle").html("Sign Up");
             $("#loginsignupbutton").html("Sign Up");
-            $("#togglelogin").html("Login")
+            $("#togglelogin").html("Login");
             
         }else{
             
             $("#loginActive").val("1");
             $("#loginmodaltitle").html("Login");
             $("#loginsignupbutton").html("Login");
-            $("#togglelogin").html("Sign Up")
+            $("#togglelogin").html("Sign Up");
         
         }
     })
     
+    //setup post actions via ajax to actions.php
     $("#loginsignupbutton").click(function(){
    
         $.ajax({
@@ -65,7 +68,17 @@
             url: "views/actions.php?action=loginSignup",
             data: "email=" + $("#email").val() + "&password=" + $("#password").val() + "&loginActive=" + $("#loginActive").val(),
             success: function(result){
-                alert(result);
+                
+                //if result=1, sign up successfully!
+                if(result == "1") {
+                    
+                window.loation.assign("http://localhost:81/AIEMR/");
+                
+                }else{
+                    
+                    $("#loginAlert").html(result).show();
+                }
+                
             }
         });
     });
