@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       
     <link rel="stylesheet"
-            href="http://localhost:8080/AIEMR/views/styles.css">
+            href="http://localhost:81/AIEMR/views/styles.css">
 
     <title>AIEMR</title>
   </head>
