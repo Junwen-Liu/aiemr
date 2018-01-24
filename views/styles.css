@@ -6,6 +6,10 @@
     display: none;
 }
 
+#username{
+    padding-right: 20px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

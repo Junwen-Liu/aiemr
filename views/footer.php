@@ -70,9 +70,9 @@
             success: function(result){
                 
                 //if result=1, sign up successfully!
-                if(result == "1") {
+                if(result == 1) {
                     
-                window.loation.assign("http://localhost:81/AIEMR/");
+                window.location.assign("http://localhost:8080/AIEMR/");
                 
                 }else{
                     

@@ -10,7 +10,7 @@
     
     <!-- Self defined CSS -->
     <link rel="stylesheet"
-            href="http://localhost:81/AIEMR/views/styles.css">
+            href="http://localhost:8080/AIEMR/views/styles.css">
 
     <title>AIEMR</title>
   </head>
@@ -46,7 +46,25 @@
       </li>
     </ul>
     <div class="form-inline my-2 my-lg-0">
+        
+        <?php if($_SESSION){
+        $query = "select * from users where id = '".$_SESSION['id']."' LIMIT 1";
+            $result = mysqli_query($link, $query);
+        if($result){
+            $row = mysqli_fetch_assoc($result);
+        ?>
+        <span href="#" class="badge badge-pill badge-light" id = "username">
+            <?php
+                print_r('Log in as: '.$row['email']);
+            ?>
+        </span>
+        <?php
+        }
+        ?>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="?function=logout">Logout</a>
+        <?php }else{ ?>
       <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">Login/Signup</button>
+        <?php } ?>
     </div>
   </div>
 </nav>

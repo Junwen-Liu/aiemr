@@ -35,11 +35,15 @@
                 $query = "INSERT INTO users (email,password) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."','".mysqli_real_escape_string($link, $_POST['password'])."')";
                     
                     if(mysqli_query($link, $query)){
+                        
+                        //assign id into session id
+                         $_SESSION['id'] = mysqli_insert_id($link);
                         //hash the password use update query. will md5 the md5ed version of id, then append it to the password
-                        $query="update users set password = '".md5(md5(mysqli_insert_id($link)).$_POST['password'])."' where id= ".mysqli_insert_id($link)." LIMIT 1";
+                        $query="update users set password = '".md5(md5($_SESSION['id']).$_POST['password'])."' where id= ".mysqli_insert_id($link)." LIMIT 1";
                         mysqli_query($link, $query);
                         
                         echo 1;//sign up successfully!
+                        
                     }else{
                         $error = "Couldn't created user - please try again later";
                     }
@@ -51,7 +55,9 @@
             $row = mysqli_fetch_assoc($result);
             
             if ($row["password"] == md5(md5($row["id"]).$_POST['password'])){
-                echo "successfully logged in!";
+                echo 1; //login successfully
+                
+                $_SESSION['id']=$row['id'];
             }else{
                 $error = "can not find that username/password combination, please try again.";
             }
