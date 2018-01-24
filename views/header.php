@@ -10,8 +10,8 @@
     
     <!-- Self defined CSS -->
     <link rel="stylesheet"
-            href="http://localhost:8080/AIEMR/views/styles.css">
-
+            href="http://localhost:81/AIEMR/views/css/styles.css">
+    </script>
     <title>AIEMR</title>
   </head>
   <body>
@@ -28,15 +28,15 @@
         <a class="nav-link" href="?page=dashboard">DashBoard <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?page=timeline">TimeLine</a>
+        <a class="nav-link" href="?page=timeline">Schedules</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Schedules
+          Appointment/task
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="?page=myschedules">My Schedules</a>
-          <a class="dropdown-item" href="?page=myoncologist">My Oncologist</a>
+          <a class="dropdown-item" href="?page=myschedules">Appointment</a>
+          <a class="dropdown-item" href="?page=myoncologist">Task</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="?page=mynotification">My Notifications</a>
         </div>

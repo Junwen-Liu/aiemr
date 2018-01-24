@@ -72,7 +72,7 @@
                 //if result=1, sign up successfully!
                 if(result == 1) {
                     
-                window.location.assign("http://localhost:8080/AIEMR/");
+                window.location.assign("http://localhost:81/AIEMR/");
                 
                 }else{
                     
@@ -85,6 +85,7 @@
 
 
 </script>
+
 
   </body>
 </html>
