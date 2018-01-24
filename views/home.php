@@ -1,5 +1,5 @@
-<div class="container">
-    
-    <h1>AIEMR Oncology</h1>
-
-</div>
+<?php
+    include("home_search.php");
+    //include("home_timeline.php");
+    include("home_grid.php");
+?>
