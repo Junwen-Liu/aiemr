@@ -10,6 +10,36 @@
     padding-right: 15px;
 }
 
+.mainContainer{
+    padding: 5px;
+    padding-left: 15px;
+    background-color: aqua;
+}
+
+.subboxContainer{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 5px;
+    background-color: white;
+
+    
+}
+
+.definedfont1{
+    color: crimson;
+    font-size: 25px;
+}
+
+.definedfont2{
+    color:darkgreen;
+    font-size: 22px;
+    align-items: baseline;
+}
+
+.boxContainer{
+    padding:  2px;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
