@@ -3,17 +3,17 @@
     <div class="row">
   <div class="col-md-8">
       
-        <?php if ($_GET['userid']) { ?>
+        <?php if (isset($_GET['userid'])) { 
       
-      <?php displayTweets($_GET['userid']); ?>
+      displayTweets($_GET['userid']); 
       
-      <?php } else { ?> 
+     } else {  ?>
         
         <h2>Active Users</h2>
         
-        <?php displayUsers(); ?>
+        <?php displayUsers();
       
-      <?php } ?>
+      } ?>
       
         </div>
   <div class="col-md-4">

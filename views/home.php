@@ -3,7 +3,7 @@
     <div class="row">
   <div class="col-md-8">
         
-        <h2>Recent tweets</h2>
+        <h2>Recent Records</h2>
         
         <?php displayTweets('public'); ?>
       

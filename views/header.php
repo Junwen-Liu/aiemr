@@ -14,7 +14,7 @@
   <body>
       
       <nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="http://completewebdevelopercourse.com/content/12-twitter/">Twitter</a>
+  <a class="navbar-brand" href="http://localhost:81/AIEMR/views/home.php">Twitter</a>
   <ul class="nav navbar-nav">
     <li class="nav-item">
       <a class="nav-link" href="?page=timeline">Your timeline</a>
