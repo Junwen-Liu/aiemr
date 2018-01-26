@@ -14,16 +14,16 @@
   <body>
       
       <nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="http://localhost:81/AIEMR/views/home.php">Twitter</a>
+  <a class="navbar-brand" href="http://localhost:81/AIEMR/">AIEMR</a>
   <ul class="nav navbar-nav">
     <li class="nav-item">
       <a class="nav-link" href="?page=timeline">Your timeline</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="?page=yourtweets">Your tweets</a>
+      <a class="nav-link" href="?page=yourtweets">Your Appointment</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="?page=publicprofiles">Public Profiles</a>
+      <a class="nav-link" href="?page=publicprofiles">My Profiles</a>
     </li>
   </ul>
   <div class="form-inline pull-xs-right">

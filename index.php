@@ -21,12 +21,14 @@
 
             include("views/publicprofiles.php");
 
-        } else {
-
-            include("views/home.php");
-
+        } 
+        
         }
-    }
+        else {
+
+                    include("views/home.php");
+
+                }
         
     include("views/footer.php");
 
