@@ -1,70 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <!-- Self defined CSS -->
-    <link rel="stylesheet"
-            href="http://localhost:8080/AIEMR/views/styles.css">
-
-    <title>AIEMR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+      
+      <link rel="stylesheet" href="http://localhost:81/AIEMR/styles.css">
   </head>
   <body>
       
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="http://localhost:81/AIEMR">AIEMR Oncology</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="?page=dashboard">DashBoard <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?page=timeline">TimeLine</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Schedules
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="?page=myschedules">My Schedules</a>
-          <a class="dropdown-item" href="?page=myoncologist">My Oncologist</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="?page=mynotification">My Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?page=myprofile">My profile</a>
-      </li>
-    </ul>
-    <div class="form-inline my-2 my-lg-0">
-        
-        <?php if($_SESSION){
-        $query = "select * from users where id = '".$_SESSION['id']."' LIMIT 1";
-            $result = mysqli_query($link, $query);
-        if($result){
-            $row = mysqli_fetch_assoc($result);
-        ?>
-        <span href="#" class="badge badge-pill badge-light" id = "username">
-            <?php
-                print_r('Log in as: '.$row['email']);
-            ?>
-        </span>
-        <?php
-        }
-        ?>
-        <a class="btn btn-outline-success my-2 my-sm-0" href="?function=logout">Logout</a>
-        <?php }else{ ?>
-      <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">Login/Signup</button>
-        <?php } ?>
-    </div>
+      <nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="http://completewebdevelopercourse.com/content/12-twitter/">Twitter</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="?page=timeline">Your timeline</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="?page=yourtweets">Your tweets</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="?page=publicprofiles">Public Profiles</a>
+    </li>
+  </ul>
+  <div class="form-inline pull-xs-right">
+      
+      <?php if ($_SESSION['id']) { ?>
+      
+        <a class="btn btn-success-outline" href="?function=logout">Logout</a>
+      
+      <?php } else { ?>
+      
+    <button class="btn btn-success-outline" data-toggle="modal" data-target="#myModal">Login/Signup</button>
+      
+      <?php } ?>
   </div>
 </nav>
