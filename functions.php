@@ -120,7 +120,7 @@
 
                     echo "Unfollow";
 
-                } else {
+                } else {f
 
                     echo "Follow";
 
