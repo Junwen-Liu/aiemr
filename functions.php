@@ -10,7 +10,7 @@
         exit();
         
     }
-
+    
     if ($_GET['function'] == "logout") {
         
         session_unset();
