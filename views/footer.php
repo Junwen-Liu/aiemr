@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>&copy; AIMER Oncology</p>
+    <p>&copy; CLife Inc.</p>
 </footer>   
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
